@@ -1,0 +1,337 @@
+@import "utilities/variables";
+@import "utilities/buttons";
+@import "utilities/animations";
+@import "utilities/grid";
+@import "utilities/typography";
+@import "utilities/utilities";
+
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%; // 10px
+    background-color: $color-black;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif; //backup
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(
+        to left bottom,
+        rgba($color-black, .4),
+        rgba($color-black, 0)),
+        url(../img/mountain.png);
+    background-size: cover;
+    background-position: top;
+    background-color: $color-black;
+    line-height: 1.5;
+    border-radius: 0 0 15rem 0;
+//header_logo
+    &_logo{
+        display: inline-block;
+        position: absolute;
+        top: 2.5rem;
+        left: 6rem;
+
+        &-img{
+            height: 9.5rem;
+        }
+    }
+//header_nav
+    &_nav{ 
+        width: 55%;
+        position: absolute;
+        right: 7rem;
+        top: 6.8rem;
+        text-align: right;
+//menu
+        &-menu{
+            display: inline-block;
+        }
+
+        &-social{
+            display: inline-block;
+        }
+    } 
+//header_text
+    &_text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        
+        &-open{
+            margin-top: 3rem;
+            width: 30%;
+            animation: moveInBottom 1s ease-out;
+
+            &:hover{
+                width: 31%;
+                margin-top: 2.9rem;
+            }
+
+            &:active{
+                width: 30%;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+// MAIN !!!--------
+.main{
+    // height: 300px;
+    width: 100%;
+    background: linear-gradient(180deg, $color-black, $color-blue);
+    background-color: black;
+    color: red;
+    padding: 5rem 4rem;
+
+    &_first{
+        overflow: hidden;
+
+        &-left{
+            text-align: left;
+            float: left;
+            width: 45%;
+        }
+        
+        &-right{
+            float: left;
+            width: 55%;
+            text-align: center;
+        }
+    
+        .right-drone{
+            width: 100%;
+        }
+    }
+
+    &_second{
+        width: 70%;
+        height: 40rem;
+        margin: 0 auto;
+        border-radius: 2rem 2rem 2rem 10rem;
+        background-color: $color-black;
+        margin-top: 13rem;
+        margin-bottom: 11rem;
+
+        &-video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 2rem 10rem 2rem 10rem;
+            z-index: 999;
+            opacity: .7;
+        }
+    }
+
+    &_third{
+        text-align: center;
+    }
+}
+
+// music
+.music{
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+        rgba($color-black, .4),
+        rgba($color-black, .9)),
+        url(../img/music.jpg);
+    background-size: cover;
+    height: 50rem;
+    position: relative;
+
+    &_content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-img{
+        margin-top: 5rem;
+        width: 35%;
+    }
+}
+
+//article
+.article{
+    color: $color-heading;
+    width: 100%;
+    text-align: center;
+}
+
+//carousel
+.carousel{
+    width: 100%;
+    position: relative;
+    height: 45rem;
+    background-color: $color-black;
+    margin-bottom: 10rem;
+    overflow: hidden;
+
+    &-first{
+        position: absolute;
+        background-image: url(../img/brasov.png);
+        background-position: right;
+        // background-size: ;
+        // background-color: green;
+        width: 23%;
+        height: 100%;
+    }
+
+    &-second{
+        position: absolute;
+        // background-color: yellow;
+        background-image: url(../img/brasov.png);
+        background-size: cover;
+        // background-position: top;
+        width: 50%;
+        margin: 0 2%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        margin: 0;
+    }
+
+    &-third{
+        position: absolute;
+        // background-color: brown;
+        background-image: url(../img/brasov.png);
+        width: 23%;
+        height: 100%;
+        right: 0;
+    }
+}
+
+//vezi_oferta
+.vezi_oferta{
+    margin: 10rem
+}
+
+//footer
+.footer{
+    // background-color: red;
+    font-size: 2rem;
+    margin: 0 6rem;
+    font-weight: 100;
+    color: rgb(210, 210, 210); //color
+    
+    &_section{
+        float: left;
+        width: 25%;
+        
+        h2{
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            color: #ededed;
+        }
+
+        li{
+            list-style: none;
+            color: rgb(210, 210, 210); //color
+            padding-bottom: .5rem;
+
+            a,
+            a:link,
+            a:visited,
+            a:hover,
+            a:active{
+                color: rgb(210, 210, 210); //color
+                text-decoration: none;
+            }
+        }
+    }
+       
+    &_img{
+        text-align: right;
+
+        &-logo{
+            height: 6.5rem;
+            max-width: 100%;
+        }
+        &-booking{
+            height: 3.5rem;
+            max-width: 100%;
+        }
+    }
+
+    &_form{
+        position: relative;
+        background-origin: 1px solid green;
+
+        #subscr{
+            height: 3rem;
+            border: 2px solid rgb(128, 128, 128);
+            position: relative;
+            right: 4rem;
+            background-color: $color-black;
+        }
+
+        &-img{
+            height: 3rem;
+            position: absolute;
+            right: 0;
+            border: 2px solid rgb(128, 128, 128);
+        }
+    }
+
+    &_social{
+
+        li{
+            display: inline-block;
+            margin-top: 1rem;
+            margin-left: .5rem;
+        }
+
+        &-list-1{
+            height: 2rem;
+        }
+    }
+
+    &_clear{
+        clear: both;
+    }
+
+    &_paragraph{
+        font-size: 1.5rem;
+        // margin-top: 1.5rem;
+        border-top: 1px solid #fff;
+        padding: 1rem 0;
+
+        span{
+            list-style: none;
+            color: rgb(210, 210, 210); //color
+            margin-left: 2rem;
+
+            a,
+            a:link,
+            a:visited,
+            a:hover,
+            a:active{
+                color: rgb(210, 210, 210); //color
+                text-decoration: none;
+            }
+        }
+    }
+}

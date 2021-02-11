@@ -1,0 +1,133 @@
+//headings
+.heading_primary{
+    text-transform: uppercase;
+    color: $color-white-light;
+    line-height: 1;
+
+    &-1{
+        display: block;
+        font-size: 4.5rem;
+        font-weight: 300;
+        animation: moveInLeft 1s ease-in;
+    }
+
+    &-2{
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        padding-top: 1.5rem;
+        animation: moveInRight 1s ease-in;
+    }
+
+}
+
+//-------------
+
+.heading_secondary{
+    text-transform: uppercase;
+    color: $color-white-light;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 6rem;
+
+    span{
+        display: block;
+    }
+}
+
+//------------------
+
+.heading_tertiary{
+    color: $color-white-light;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 10rem;
+    letter-spacing: .3rem;
+}
+
+.heading_special{
+    color: $color-white-light;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    margin: 10rem 0;
+    font-size: 12rem;
+
+}
+
+//paragraph
+.paragraph-small{
+    font-size: 1.5rem;
+    color: $color-white-light;
+}
+
+.paragraph-medium{
+    font-size: 2.5rem;
+    color: $color-white-light;
+}
+
+.paragraph-big{
+    font-size: 3.5rem;
+    color: $color-white-light;
+}
+
+//lists
+.nav_list{
+    font-weight: 300;
+    font-size: 2.8rem;
+    
+
+    li{
+        display: inline-block;
+        padding: 0 0.5rem;
+        list-style-type: none;
+    }
+
+    li:last-child{
+        margin-right: 3rem;
+    }
+
+    a,
+    a:link
+    a:visited{
+        text-decoration: none;
+        color: $color-white-light;
+    }
+
+    a:hover,
+    a:active{
+        border-bottom: 1px solid $color-gray-dark;
+    }
+
+    a:active{
+        font-size: 2.7rem;
+        font-weight: 400;
+        padding: 0 0.1rem;
+    }
+}
+
+
+
+//------------
+.social_list{
+
+    li{
+        display: inline-block;
+    }
+
+    a:hover{
+        box-shadow: .5rem .5rem .5rem rgba($color-gray-dark, .4);
+        
+    }
+
+    a:active{
+        box-shadow: .5rem .5rem .5rem rgba($color-white-light, .4);
+        
+    }
+
+    &-img{
+        height: 2.3rem;
+        padding-left: .5rem;
+    }
+}

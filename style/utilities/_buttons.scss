@@ -1,0 +1,18 @@
+.btn{
+    color: $color-white-dark;
+
+    &:link,
+    &:visited{
+        text-decoration: none;
+    }
+
+    
+    &:hover{
+        font-size: 2.6rem;
+        // margin-bottom: 1rem;
+    }
+
+    &:active{
+        font-size: 2.5rem;
+    }
+}
