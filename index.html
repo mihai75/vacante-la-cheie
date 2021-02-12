@@ -8,6 +8,11 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!--test css / JS-->
+    <link rel="stylesheet" href="style/test.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </head>
 <body>
     
@@ -40,7 +45,7 @@
                 <span class="heading_primary-1">Descoperă o nouă perspectivă</span>
                 <span class="heading_primary-2">Creăm împreună imaginea afacerii dumneavoastră</span>
             </h1>
-            <a href="#"><img class="header_text-open" src="icon/open-video.svg" alt="open Video"></a>
+            <a href="#"><img class="btn_icon" src="icon/open-video.svg" alt="open Video"></a>
         </div>
     </header>
 
@@ -91,7 +96,7 @@
                 împreuna aceasta poveste de care viitorii oaspeții se vor îndragosti!
             </p>
 
-            <div class="paragraph-medium u-margin-top-big">
+            <div class="main_third-btn paragraph-medium u-margin-top-big">
                 <a class="btn" href="#">Portofoliu &gt;</a>
             </div>
         </div>
@@ -101,7 +106,7 @@
     <div class="music">
         <div class="music_content">
             <h3 class="heading_tertiary">Muzică originală</h3>
-            <img class="music-img" src="icon/open-audio.svg" alt="deschide video">
+            <img class="btn_icon" src="icon/open-audio.svg" alt="deschide video">
         </div>
     </div>
 
@@ -126,31 +131,28 @@
     </article>
      
 <!--carousel-->
-    <div class="carousel">
-        <div class="carousel-first">
-            
-        </div>
 
-        <div class="carousel-second">
-            
-        </div>
+<div class="gallery js-flickity"
+  data-flickity-options='{ "wrapAround": true }'>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div>
 
-        <div class="carousel-third">
-            
-        </div>
-    </div>
 
 <!--vezi_oferta-->
     <div class="vezi_oferta paragraph-medium u-margin-top-big">
-            <a class="btn" href="#">Vezi oferta &gt;</a>
+        <a class="btn" href="#">Vezi ofertă &gt;</a>
     </div>
 
 <!--footer-->
     <footer class="footer">
-        <div class="footer_section">
-            <h2>Contact</h2>
-
-            <ul>
+        
+        <div class="footer_section"><!--section 1-->
+            <h3 class="heading-footer">Contact</h3>
+            <ul class="list-footer">
                 <li>Telefon: <a href="tel:+40721000000">0721.000.000</a></li>
                 <li>E-mail: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
                 <li>Website: <a href="www.website.ro">www.website.ro</a></li>
@@ -158,20 +160,18 @@
             </ul>
         </div>
 
-        <div class="footer_section">
-                <h2>Pagini</h2>
-    
-                <ul>
+        <div class="footer_section footer_section-1"> <!--section2-->
+                <h3 class="heading-footer">Pagini</h3>
+                <ul class="list-footer">
                     <li><a href="index.html">Acasă</a></li>
                     <li><a href="oferte.html">Ofertă</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
         </div>
 
-        <div class="footer_section">
-            <h2>Suport</h2>
-
-            <ul>
+        <div class="footer_section"><!--section 3-->
+            <h3 class="heading-footer">Suport</h3>
+            <ul class="list-footer">
                 <li><a href="#">Termeni și condiții</a></li>
                 <li><a href="#">General Data Protection Regulation</a></li>
                 <li>WEB PRODUCTION SRL</li>
@@ -186,29 +186,36 @@
             <div class="block">
                 <img class="footer_img-booking" src="icon/booking.svg" alt="booking">
             </div>
-            <div class="footer_form">
-                <form action="#" method="POST">
+        
+            <form action="#" method="POST">
+                <div class="footer_form">
                     <input type="text" name="subscr" id="subscr" placeholder=" Aboneaza-te!">
                     <img class="footer_form-img" src="icon/mail.svg" alt="subscribe">            
-                </form>
-            </div>
-
-            <div class="footer_social">
-                <ul class="footer_social-list">
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/facebook.svg" alt="facebook"></a></li>
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/youtube.svg" alt="youtube"></a></li>
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/instagram.svg" alt="instagram"></a></li>
-                </ul>
-            </div>
+                </div>
+            </form>
         </div>
 
         <div class="footer_clear"></div>
 
-        <div class="footer_paragraph">
-            <p>Copyrigt &copy; 2020 Vacanță la cheie
-                <span><a href="#">Cookies</a></span>
-            </p>
+        <div class="footer_paragraph u-margin-bottom-small">
+            <div class="footer_paragraph-1">
+                <p class="paragraph-small">Copyrigt &copy; 2020 Vacanță la cheie
+                    <span class="paragraph-small u-margin-left-small"><a href="#">Cookies</a></span>
+                </p>
+            </div>
+
+            <div class="footer_paragraph-2">
+                <ul class="social_list">
+                    <li><a href="#"><img class="social_list-img" src="icon/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img class="social_list-img" src="icon/youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img class="social_list-img" src="icon/instagram.svg" alt="instagram"></a></li>
+                </ul>
+            </div>
+
+            
+
         </div>
+
     </footer>
 
 </body>

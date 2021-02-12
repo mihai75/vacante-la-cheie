@@ -1,5 +1,6 @@
 .btn{
-    color: $color-white-dark;
+    color: $color-gray-light;
+    border-bottom: 1px solid $color-gray-light;
 
     &:link,
     &:visited{
@@ -14,5 +15,21 @@
 
     &:active{
         font-size: 2.5rem;
+    }
+}
+
+.btn_icon{
+    margin-top: 3rem;
+    width: 14%;
+    animation: moveInBottom 1s ease-out;
+
+    &:hover{
+        width: 15%;
+        margin-top: 2.9rem;
+    }
+
+    &:active{
+        width: 14%;
+        margin-top: 3rem;
     }
 }

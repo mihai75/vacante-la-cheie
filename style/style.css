@@ -1,11 +1,23 @@
 .btn {
-  color: #f9f9f9; }
+  color: #ddd;
+  border-bottom: 1px solid #ddd; }
   .btn:link, .btn:visited {
     text-decoration: none; }
   .btn:hover {
     font-size: 2.6rem; }
   .btn:active {
     font-size: 2.5rem; }
+
+.btn_icon {
+  margin-top: 3rem;
+  width: 14%;
+  animation: moveInBottom 1s ease-out; }
+  .btn_icon:hover {
+    width: 15%;
+    margin-top: 2.9rem; }
+  .btn_icon:active {
+    width: 14%;
+    margin-top: 3rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -63,7 +75,7 @@
 
 .heading_primary {
   text-transform: uppercase;
-  color: #fff;
+  color: #f9f9f9;
   line-height: 1; }
   .heading_primary-1 {
     display: block;
@@ -76,14 +88,20 @@
     font-weight: 400;
     letter-spacing: .1rem;
     padding-top: 1.5rem;
-    animation: moveInRight 1s ease-in; }
+    animation: moveInRight 1s ease-in;
+    background-image: linear-gradient(to top, #fff, #888888);
+    -webkit-background-clip: text;
+    color: transparent; }
 
 .heading_secondary {
   text-transform: uppercase;
   color: #fff;
   line-height: 1.5;
   font-weight: 700;
-  font-size: 6rem; }
+  font-size: 6rem;
+  background-image: linear-gradient(to bottom right, #888888, #fff);
+  -webkit-background-clip: text;
+  color: transparent; }
   .heading_secondary span {
     display: block; }
 
@@ -92,7 +110,10 @@
   line-height: 1.2;
   font-weight: 400;
   font-size: 10rem;
-  letter-spacing: .3rem; }
+  letter-spacing: .3rem;
+  background-image: linear-gradient(to bottom, #888888, #fff);
+  -webkit-background-clip: text;
+  color: transparent; }
 
 .heading_special {
   color: #fff;
@@ -100,11 +121,21 @@
   font-weight: 700;
   letter-spacing: .3rem;
   margin: 10rem 0;
-  font-size: 12rem; }
+  font-size: 12rem;
+  background-image: linear-gradient(to bottom, #888888, #fff);
+  -webkit-background-clip: text;
+  color: transparent; }
 
 .paragraph-small {
   font-size: 1.5rem;
   color: #fff; }
+  .paragraph-small a,
+  .paragraph-small a:link,
+  .paragraph-small a:visited,
+  .paragraph-small a:hover,
+  .paragraph-small a:active {
+    color: #fff;
+    text-decoration: none; }
 
 .paragraph-medium {
   font-size: 2.5rem;
@@ -130,7 +161,7 @@ a:visited {
     color: #fff; }
   .nav_list a:hover,
   .nav_list a:active {
-    border-bottom: 1px solid #c2c2c2; }
+    border-bottom: 1px solid #f9f9f9; }
   .nav_list a:active {
     font-size: 2.7rem;
     font-weight: 400;
@@ -139,15 +170,39 @@ a:visited {
 .social_list li {
   display: inline-block; }
 
-.social_list a:hover {
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(194, 194, 194, 0.4); }
-
-.social_list a:active {
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(255, 255, 255, 0.4); }
-
 .social_list-img {
   height: 2.3rem;
+  width: 4rem;
   padding-left: .5rem; }
+  .social_list-img:hover {
+    height: 2.4rem; }
+  .social_list-img:active {
+    height: 2.3rem; }
+
+.heading-footer {
+  margin-bottom: 1.5rem;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #fff; }
+
+.list-footer {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: #f9f9f9; }
+  .list-footer li {
+    list-style: none;
+    color: #d2d2d2;
+    padding-bottom: .5rem; }
+    .list-footer li a,
+    .list-footer li a:link,
+    .list-footer li a:visited,
+    .list-footer li a:hover,
+    .list-footer li a:active {
+      color: #d2d2d2;
+      text-decoration: none; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
 
 .u-margin-bottom-big {
   margin-bottom: 6rem; }
@@ -167,6 +222,9 @@ a:visited {
 .u-margin-top-extra {
   margin-top: 8rem; }
 
+.u-margin-left-small {
+  margin-left: 2rem; }
+
 .u-paragraph-margin {
   margin-left: 15rem;
   margin-right: 15rem; }
@@ -177,7 +235,8 @@ a:visited {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  -webkit-box-sizing: border-box; }
 
 html {
   font-size: 62.5%;
@@ -217,21 +276,13 @@ body {
     .header_nav-social {
       display: inline-block; }
   .header_text {
+    height: 20rem;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-    .header_text-open {
-      margin-top: 3rem;
-      width: 30%;
-      animation: moveInBottom 1s ease-out; }
-      .header_text-open:hover {
-        width: 31%;
-        margin-top: 2.9rem; }
-      .header_text-open:active {
-        width: 30%;
-        margin-top: 3rem; }
 
 .main {
   width: 100%;
@@ -250,7 +301,7 @@ body {
       width: 55%;
       text-align: center; }
     .main_first .right-drone {
-      width: 100%; }
+      width: 85%; }
   .main_second {
     width: 70%;
     height: 40rem;
@@ -268,85 +319,44 @@ body {
       opacity: .7; }
   .main_third {
     text-align: center; }
+    .main_third-btn {
+      display: inline-block;
+      height: 3.5rem; }
 
 .music {
   width: 100%;
+  height: 50rem;
   text-align: center;
   background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(../img/music.jpg);
   background-size: cover;
-  height: 50rem;
   position: relative; }
   .music_content {
+    height: 20rem;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .music-img {
-    margin-top: 5rem;
-    width: 35%; }
 
 .article {
-  color: #fff;
   width: 100%;
   text-align: center; }
 
-.carousel {
-  width: 100%;
-  position: relative;
-  height: 45rem;
-  background-color: #000;
-  margin-bottom: 10rem;
-  overflow: hidden; }
-  .carousel-first {
-    position: absolute;
-    background-image: url(../img/brasov.png);
-    background-position: right;
-    width: 23%;
-    height: 100%; }
-  .carousel-second {
-    position: absolute;
-    background-image: url(../img/brasov.png);
-    background-size: cover;
-    width: 50%;
-    margin: 0 2%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    margin: 0; }
-  .carousel-third {
-    position: absolute;
-    background-image: url(../img/brasov.png);
-    width: 23%;
-    height: 100%;
-    right: 0; }
-
+/* ---- carousel.css ---- */
 .vezi_oferta {
-  margin: 10rem; }
+  margin: 10rem;
+  height: 3.5rem;
+  display: inline-block; }
 
 .footer {
-  font-size: 2rem;
   margin: 0 6rem;
-  font-weight: 100;
   color: #d2d2d2; }
   .footer_section {
     float: left;
-    width: 25%; }
-    .footer_section h2 {
-      margin-bottom: 1.5rem;
-      font-weight: 400;
-      color: #ededed; }
-    .footer_section li {
-      list-style: none;
-      color: #d2d2d2;
-      padding-bottom: .5rem; }
-      .footer_section li a,
-      .footer_section li a:link,
-      .footer_section li a:visited,
-      .footer_section li a:hover,
-      .footer_section li a:active {
-        color: #d2d2d2;
-        text-decoration: none; }
+    width: 25%;
+    text-align: left; }
+    .footer_section-1 {
+      padding-left: 3rem; }
   .footer_img {
     text-align: right; }
     .footer_img-logo {
@@ -354,41 +364,28 @@ body {
       max-width: 100%; }
     .footer_img-booking {
       height: 3.5rem;
-      max-width: 100%; }
+      max-width: 90%; }
   .footer_form {
     position: relative;
-    background-origin: 1px solid green; }
+    color: white; }
     .footer_form #subscr {
       height: 3rem;
-      border: 2px solid gray;
+      border: 3px solid gray;
       position: relative;
       right: 4rem;
-      background-color: #000; }
+      color: #fff; }
     .footer_form-img {
       height: 3rem;
       position: absolute;
       right: 0;
       border: 2px solid gray; }
-  .footer_social li {
-    display: inline-block;
-    margin-top: 1rem;
-    margin-left: .5rem; }
-  .footer_social-list-1 {
-    height: 2rem; }
   .footer_clear {
     clear: both; }
   .footer_paragraph {
-    font-size: 1.5rem;
-    border-top: 1px solid #fff;
-    padding: 1rem 0; }
-    .footer_paragraph span {
-      list-style: none;
-      color: #d2d2d2;
-      margin-left: 2rem; }
-      .footer_paragraph span a,
-      .footer_paragraph span a:link,
-      .footer_paragraph span a:visited,
-      .footer_paragraph span a:hover,
-      .footer_paragraph span a:active {
-        color: #d2d2d2;
-        text-decoration: none; }
+    border-top: 1px solid #888888;
+    padding: 1rem 0;
+    overflow: hidden; }
+    .footer_paragraph-1 {
+      float: left; }
+    .footer_paragraph-2 {
+      float: right; }
