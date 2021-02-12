@@ -4,6 +4,8 @@
 @import "utilities/grid";
 @import "utilities/typography";
 @import "utilities/utilities";
+@import "layout/footer";
+@import "layout/header";
 
 
 *,
@@ -28,58 +30,7 @@ body{
     line-height: 1.5;
 }
 
-.header{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-image: linear-gradient(
-        to left bottom,
-        rgba($color-black, .4),
-        rgba($color-black, 0)),
-        url(../img/mountain.png);
-    background-size: cover;
-    background-position: top;
-    background-color: $color-black;
-    line-height: 1.5;
-    border-radius: 0 0 15rem 0;
-//header_logo
-    &_logo{
-        display: inline-block;
-        position: absolute;
-        top: 2.5rem;
-        left: 6rem;
 
-        &-img{
-            height: 9.5rem;
-        }
-    }
-//header_nav
-    &_nav{ 
-        width: 55%;
-        position: absolute;
-        right: 7rem;
-        top: 6.8rem;
-        text-align: right;
-//menu
-        &-menu{
-            display: inline-block;
-        }
-
-        &-social{
-            display: inline-block;
-        }
-    } 
-//header_text
-    &_text{
-        height: 20rem;
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-}
 
 // MAIN !!!--------
 .main{
@@ -169,89 +120,3 @@ body{
 }
 
 /* ---- carousel.css ---- */
-
-
-
-//vezi_oferta
-.vezi_oferta{
-    margin: 10rem;
-    height: 3.5rem;
-    display: inline-block;
-}
-
-//footer
-.footer{
-    margin: 0 6rem;
-    color: rgb(210, 210, 210); //color
-    
-    &_section{
-        float: left;
-        width: 25%;
-        text-align: left;
-
-        &-1{
-           padding-left: 3rem;
-        }
-    }
-       
-    &_img{
-        text-align: right;
-
-        &-logo{
-            height: 6.5rem;
-            max-width: 100%;
-        }
-        &-booking{
-            height: 3.5rem;
-            max-width: 90%;
-        }
-    }
-
-    &_form{
-        position: relative;
-        // background-color: red;
-        color: white;
-        // max-width: 90%;
-
-        #subscr{
-            height: 3rem;
-            border: 3px solid rgb(128, 128, 128);
-            position: relative;
-            right: 4rem;
-            // background-color: $color-black;
-            color: $color-white-light;
-        }
-
-        &-img{
-            height: 3rem;
-            position: absolute;
-            right: 0;
-            border: 2px solid rgb(128, 128, 128);
-        }
-    }
-
-
-//social
-    //mixin --
-    &_clear{
-        clear: both;
-    }
-    //mixin --
-
-    &_paragraph{
-        border-top: 1px solid $color-gray-dark;
-        padding: 1rem 0;
-        overflow: hidden;
-
-        &-1{
-            float: left;
-            // background-color: blue;
-        }
-
-        &-2{
-            float: right;
-            // background-color: red;
-            
-        }
-    }
-}

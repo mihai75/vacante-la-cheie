@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact</title>
         
-        <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/pages.css">
             
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
@@ -14,27 +13,28 @@
 <body>
     
     <header class="header">
+        <!--logo-->
         <div class="header_logo">
-            <img class="header_logo-img" src="img/logo-col.png" alt="LOGO">
+            <img class="header_logo-img" src="icon/logo-black.svg" alt="LOGO">
         </div>
-
-        <div class="header_nav">  <!--container -->
-            <nav class="header_nav-menu">
-                <ul class="header_nav-list">
-                    <li><a href="index.html">Acasa</a></li>
-                    <li><a href="oferte.html">Oferta</a></li>
+        <!--container-->
+        <div class="header_nav"> 
+            <nav class="header_nav-menu"><!--nav-->
+                <ul class="nav_list">
+                    <li><a href="index.html">Acasă</a></li>
+                    <li><a href="oferte.html">Ofertă</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
-            <div class="header_nav-social">
-                <ul class="header_social-list">
-                    <li><a href="#"><img class="header_social-list-1" src="icon/facebook.svg" alt="facebook"></a></li>
-                    <li><a href="#"><img class="header_social-list-1" src="icon/youtube.svg" alt="youtube"></a></li>
-                    <li><a href="#"><img class="header_social-list-1" src="icon/instagram.svg" alt="instagram"></a></li>
+            <div class="header_nav-social"><!--social-->
+                <ul class="social_list">
+                    <li><a href="#"><img class="social_list-img" src="icon/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img class="social_list-img" src="icon/youtube.svg" alt="youtube"></a></li>
+                    <li><a href="#"><img class="social_list-img" src="icon/instagram.svg" alt="instagram"></a></li>
                 </ul>
             </div>
-        </div> <!--end container-->
+        </div>
     </header>
 
 
@@ -52,72 +52,81 @@
     </div>
 
 
+    <div class="footer-second"> <!--background-->
+    <!--vezi_oferta-->
+    <div class="vezi_oferta paragraph-medium u-margin-top-big">
+        <a class="btn" href="#">Vezi ofertă &gt;</a>
+    </div>
 
     <!--footer-->
-    <footer class="footer">
-        <div class="footer_section">
-            <h2>Contact</h2>
 
-            <ul>
-                <li>Telefon: <a href="tel:+40721000000">0721.000.000</a></li>
-                <li>E-mail: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
-                <li>Website: <a href="www.website.ro">www.website.ro</a></li>
-                <li>Adresă: Bucuresti, Sector 1</li>
-            </ul>
-        </div>
-
-        <div class="footer_section">
-                <h2>Pagini</h2>
-    
-                <ul>
-                    <li><a href="index.html">Acasă</a></li>
-                    <li><a href="oferte.html">Ofertă</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+    <div class="footer-second">
+        <footer class="footer">
+            
+            <div class="footer_section"><!--section 1-->
+                <h3 class="heading-footer">Contact</h3>
+                <ul class="list-footer">
+                    <li>Telefon: <a href="tel:+40721000000">0721.000.000</a></li>
+                    <li>E-mail: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+                    <li>Website: <a href="www.website.ro">www.website.ro</a></li>
+                    <li>Adresă: Bucuresti, Sector 1</li>
                 </ul>
-        </div>
-
-        <div class="footer_section">
-            <h2>Suport</h2>
-
-            <ul>
-                <li><a href="#">Termeni și condiții</a></li>
-                <li><a href="#">General Data Protection Regulation</a></li>
-                <li>WEB PRODUCTION SRL</li>
-                <li>J40/2345/2021</li>
-            </ul>
-        </div>
-
-        <div class="footer_section footer_img">
-            <div class="block">
-                <img class="footer_img-logo" src="icon/logo-black.svg" alt="logo">
             </div>
-            <div class="block">
-                <img class="footer_img-booking" src="icon/booking.svg" alt="booking">
+
+            <div class="footer_section footer_section-1"> <!--section2-->
+                    <h3 class="heading-footer">Pagini</h3>
+                    <ul class="list-footer">
+                        <li><a href="index.html">Acasă</a></li>
+                        <li><a href="oferte.html">Ofertă</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
             </div>
-            <div class="footer_form">
+
+            <div class="footer_section"><!--section 3-->
+                <h3 class="heading-footer">Suport</h3>
+                <ul class="list-footer">
+                    <li><a href="#">Termeni și condiții</a></li>
+                    <li><a href="#">General Data Protection Regulation</a></li>
+                    <li>WEB PRODUCTION SRL</li>
+                    <li>J40/2345/2021</li>
+                </ul>
+            </div>
+
+            <div class="footer_section footer_img">
+                <div class="block">
+                    <img class="footer_img-logo" src="icon/logo-black.svg" alt="logo">
+                </div>
+                <div class="block">
+                    <img class="footer_img-booking" src="icon/booking.svg" alt="booking">
+                </div>
+            
                 <form action="#" method="POST">
-                    <input type="text" name="subscr" id="subscr" placeholder=" Aboneaza-te!">
-                    <img class="footer_form-img" src="icon/mail.svg" alt="subscribe">            
+                    <div class="footer_form">
+                        <input type="text" name="subscr" id="subscr" placeholder=" Aboneaza-te!">
+                        <img class="footer_form-img" src="icon/mail.svg" alt="subscribe">            
+                    </div>
                 </form>
             </div>
 
-            <div class="footer_social">
-                <ul class="footer_social-list">
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/facebook.svg" alt="facebook"></a></li>
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/youtube.svg" alt="youtube"></a></li>
-                    <li><a href="#"><img class="footer_social-list-1" src="icon/instagram.svg" alt="instagram"></a></li>
-                </ul>
+            <div class="footer_clear"></div>
+
+            <div class="footer_paragraph">
+                <div class="footer_paragraph-1">
+                    <p class="paragraph-small">Copyrigt &copy; 2020 Vacanță la cheie
+                        <span class="paragraph-small u-margin-left-small"><a href="#">Cookies</a></span>
+                    </p>
+                </div>
+
+                <div class="footer_paragraph-2">
+                    <ul class="social_list">
+                        <li><a href="#"><img class="social_list-img" src="icon/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="#"><img class="social_list-img" src="icon/youtube.svg" alt="youtube"></a></li>
+                        <li><a href="#"><img class="social_list-img" src="icon/instagram.svg" alt="instagram"></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <div class="footer_clear"></div>
-
-        <div class="footer_paragraph">
-            <p>Copyrigt &copy; 2020 Vacanță la cheie
-                <span><a href="#">Cookies</a></span>
-            </p>
-        </div>
-    </footer>
+        </footer>
+    </div>
     
 </body>
 </html>

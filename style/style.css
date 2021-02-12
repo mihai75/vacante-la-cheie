@@ -50,8 +50,6 @@
 .row {
   max-width: 100%;
   margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
   .row::after {
     content: "";
     display: table;
@@ -204,6 +202,9 @@ a:visited {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
 .u-margin-bottom-big {
   margin-bottom: 6rem; }
 
@@ -229,24 +230,54 @@ a:visited {
   margin-left: 15rem;
   margin-right: 15rem; }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  box-sizing: inherit;
-  -webkit-box-sizing: border-box; }
-
-html {
-  font-size: 62.5%;
+.vezi_oferta {
+  margin: 8rem;
+  height: 3.5rem;
+  display: inline-block;
   background-color: #000; }
 
-body {
-  box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 400;
-  line-height: 1.5; }
+.footer {
+  margin: 0 6rem;
+  color: #d2d2d2;
+  background-color: #000; }
+  .footer_section {
+    float: left;
+    width: 25%;
+    text-align: left; }
+    .footer_section-1 {
+      padding-left: 3rem; }
+  .footer_img {
+    text-align: right; }
+    .footer_img-logo {
+      height: 6.5rem;
+      max-width: 100%; }
+    .footer_img-booking {
+      height: 3.5rem;
+      max-width: 90%; }
+  .footer_form {
+    position: relative;
+    color: white; }
+    .footer_form #subscr {
+      height: 3rem;
+      border: 3px solid gray;
+      position: relative;
+      right: 4rem;
+      color: #fff; }
+    .footer_form-img {
+      height: 3rem;
+      position: absolute;
+      right: 0;
+      border: 2px solid gray; }
+  .footer_clear {
+    clear: both; }
+  .footer_paragraph {
+    border-top: 1px solid #888888;
+    padding: 1rem 0;
+    overflow: hidden; }
+    .footer_paragraph-1 {
+      float: left; }
+    .footer_paragraph-2 {
+      float: right; }
 
 .header {
   width: 100%;
@@ -283,6 +314,25 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+  -webkit-box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  background-color: #000; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  line-height: 1.5; }
 
 .main {
   width: 100%;
@@ -343,49 +393,3 @@ body {
   text-align: center; }
 
 /* ---- carousel.css ---- */
-.vezi_oferta {
-  margin: 10rem;
-  height: 3.5rem;
-  display: inline-block; }
-
-.footer {
-  margin: 0 6rem;
-  color: #d2d2d2; }
-  .footer_section {
-    float: left;
-    width: 25%;
-    text-align: left; }
-    .footer_section-1 {
-      padding-left: 3rem; }
-  .footer_img {
-    text-align: right; }
-    .footer_img-logo {
-      height: 6.5rem;
-      max-width: 100%; }
-    .footer_img-booking {
-      height: 3.5rem;
-      max-width: 90%; }
-  .footer_form {
-    position: relative;
-    color: white; }
-    .footer_form #subscr {
-      height: 3rem;
-      border: 3px solid gray;
-      position: relative;
-      right: 4rem;
-      color: #fff; }
-    .footer_form-img {
-      height: 3rem;
-      position: absolute;
-      right: 0;
-      border: 2px solid gray; }
-  .footer_clear {
-    clear: both; }
-  .footer_paragraph {
-    border-top: 1px solid #888888;
-    padding: 1rem 0;
-    overflow: hidden; }
-    .footer_paragraph-1 {
-      float: left; }
-    .footer_paragraph-2 {
-      float: right; }
