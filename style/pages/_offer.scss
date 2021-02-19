@@ -1,0 +1,7 @@
+.col-1-of-3{
+    animation: moveInLeft 2s ease-in;
+
+    &:not(:first-child){
+        animation: moveInBottom 2s ease-out;
+    } 
+}

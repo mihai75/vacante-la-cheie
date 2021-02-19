@@ -1,0 +1,53 @@
+.go_back{
+    height: 100%;
+    color: black;
+    padding-left: 3rem;
+    margin: 5rem 0 0 4rem;
+    font-size: 3rem;
+    
+    animation: moveInBottom 2s ease-in;
+
+    a,
+        a:active,
+        a:link,
+        a:visited,
+        a:hover{
+            text-decoration: none;
+            color: #000;
+        }
+
+}
+
+// -- buy -- 
+.buy{
+    width: 100%;
+    // overflow: hidden;
+    padding-left: 35%;
+    animation: moveInLeft 2s ease-in;
+   
+}
+
+
+
+//form
+.form-label{
+    display: block;
+    font-size: 2rem;
+    // text-align: center;
+}
+
+.inp{
+    width: 50%;
+    height: 3rem;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-bottom: 1rem;
+}
+
+.txtar{
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-bottom: 1rem;
+}
+

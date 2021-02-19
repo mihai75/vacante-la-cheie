@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
+        <title>Oferta</title>
         
         <link rel="stylesheet" href="style/pages.css">
             
@@ -38,20 +38,85 @@
     </header>
 
 
-    <div class="main_contact">
-        <h1 class="heading_tertiary u-margin-top-big u-margin-bottom-medium">Contact</h1>
 
-        <ul class="list_contact">
-            <li>Telefon: <a href="tel:+40721000000">0721.000.000</a></li>
-            <li>E-mail: <a href="mailto:mail@mail.com">mail@mail.com</a></li>
-            <li>Website: <a href="www.website.ro">www.website.ro</a></li>
-            <li>Adresă: Bucuresti, Sector 1</li>
-            <li>WEB PRODUCTION SRL</li>
-            <li>J40/2345/2021</li>
-        </ul>
+    <div class="go_back">
+        <a href="oferte.html">
+            &larr; <span>înapoi</span>
+        </a>
     </div>
 
 
+
+<!--comanda-->
+    <div class="buy u-margin-bottom-big">
+<!-- -- LEFT -- -->
+        
+                <h3 class="heading-com u-margin-bottom-medium u-margin-top-medium">Date contact</h3>
+
+                    <form action="#" method="#" name="form">
+                        <div class="form-row">
+                            <label class="form-label" for="name">Nume, Prenume</label>
+                            <input class="inp" type="text" name="name" id="name" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="denumire-unitate">Denumire unitate cazare</label>
+                            <input class="inp" type="text" name="denumire-unitate" id="denumire-unitate" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <label class="form-label" for="judet">Judet</label>
+                            <input class="inp" type="text" name="judet" id="judet" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="oras">Oras</label>
+                            <input class="inp" type="text" name="oras" id="oras" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="adresa">Adresa</label>
+                            <input class="inp" type="text" name="adresa" id="adresa" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="telefon">Telefon</label>
+                            <input class="inp" type="phone" name="telefon" id="telefon" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="inp" type="email" name="email" id="email" required>
+                        </div>
+
+                        
+<!--Alege data filmarii-->
+                        <h3 class="heading-com u-margin-bottom-medium u-margin-top-medium">Alege data filmari</h3>
+                    
+                        <div class="form-row">
+                            <!-- <label class="form-label" for="email">Email</label> -->
+                            <input class="inp" type="date" name="email" id="email" required>
+                        </div>
+<!--Specificatii-->
+                        <h3 class="heading-com u-margin-bottom-medium u-margin-top-medium">Specificatii</h3>
+
+                        <div class="form-row">
+                            <label class="form-label" for="mesaj">Mesaj</label>
+                            <textarea class="txtar" name="mesaj" id="mesaj" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="btn_off btn_off-offer u-margin-top-medium">
+                            alege <span class="btn_off-span">&rarr;</span>
+                        </div>
+                    </form>
+
+        
+
+
+    </div>
+
+
+    
 
 
     <!--footer-->
@@ -123,6 +188,8 @@
             </div>
         </footer>
     </div>
+
+
     
 </body>
 </html>

@@ -1,0 +1,11 @@
+@mixin gradientTop {
+    background-image: linear-gradient(to top, $color-white-light, $color-gray-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin gradientBott {
+    background-image: linear-gradient(to bottom right, $color-gray-dark, $color-white-light);
+    -webkit-background-clip: text;
+    color: transparent;
+}

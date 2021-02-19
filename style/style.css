@@ -19,6 +19,56 @@
     width: 14%;
     margin-top: 3rem; }
 
+.btn_off, .btn_off:link, .btn_off:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: .5rem 2rem;
+  display: inline-block;
+  border-radius: 1.5rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: 1px solid black;
+  cursor: pointer; }
+
+.btn_off:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* X - Y - Blur */ }
+  .btn_off:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn_off:active, .btn_off:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* X - Y - Blur */ }
+
+.btn_off-offer {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.9) 35%, rgba(255, 255, 255, 0.9) 40%);
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.9); }
+  .btn_off-offer::after {
+    background-color: #000; }
+
+.btn_off::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn_off-span {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  color: #fff; }
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -95,13 +145,15 @@
   text-transform: uppercase;
   color: #fff;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 6rem;
   background-image: linear-gradient(to bottom right, #888888, #fff);
   -webkit-background-clip: text;
   color: transparent; }
   .heading_secondary span {
     display: block; }
+  .heading_secondary-offer {
+    text-align: center; }
 
 .heading_tertiary {
   color: #fff;
@@ -109,7 +161,7 @@
   font-weight: 400;
   font-size: 10rem;
   letter-spacing: .3rem;
-  background-image: linear-gradient(to bottom, #888888, #fff);
+  background-image: linear-gradient(to top, #fff, #888888);
   -webkit-background-clip: text;
   color: transparent; }
 
@@ -120,7 +172,34 @@
   letter-spacing: .3rem;
   margin: 10rem 0;
   font-size: 12rem;
-  background-image: linear-gradient(to bottom, #888888, #fff);
+  background-image: linear-gradient(to top, #fff, #888888);
+  -webkit-background-clip: text;
+  color: transparent; }
+
+.heading_offer-1 {
+  background-image: linear-gradient(to bottom right, #888888, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 6rem;
+  font-weight: 300; }
+
+.heading_offer-2 {
+  background-image: linear-gradient(to bottom right, #888888, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: 400; }
+
+.heading-footer {
+  margin-bottom: 1.5rem;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #fff; }
+
+.heading-com {
+  font-size: 3.5rem;
+  color: #f9f9f9;
+  background-image: linear-gradient(to bottom right, #888888, #fff);
   -webkit-background-clip: text;
   color: transparent; }
 
@@ -142,6 +221,10 @@
 .paragraph-big {
   font-size: 3.5rem;
   color: #fff; }
+
+.paragraph-offer {
+  padding-right: 12rem;
+  font-size: 1.8rem; }
 
 .nav_list {
   font-weight: 300;
@@ -169,19 +252,13 @@ a:visited {
   display: inline-block; }
 
 .social_list-img {
-  height: 2.3rem;
+  height: 2.5rem;
   width: 4rem;
   padding-left: .5rem; }
   .social_list-img:hover {
     height: 2.4rem; }
   .social_list-img:active {
     height: 2.3rem; }
-
-.heading-footer {
-  margin-bottom: 1.5rem;
-  font-size: 2.6rem;
-  font-weight: 300;
-  color: #fff; }
 
 .list-footer {
   font-size: 1.8rem;
@@ -198,6 +275,19 @@ a:visited {
     .list-footer li a:active {
       color: #d2d2d2;
       text-decoration: none; }
+
+.list_contact {
+  margin-bottom: 12rem;
+  font-size: 2.5rem; }
+  .list_contact li {
+    margin: 1.5rem 0; }
+  .list_contact a,
+  .list_contact a:active,
+  .list_contact a:link,
+  .list_contact a:visited,
+  .list_contact a:hover {
+    text-decoration: none;
+    color: #000; }
 
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
@@ -226,12 +316,18 @@ a:visited {
 .u-margin-left-small {
   margin-left: 2rem; }
 
+.u-margin-left-medium {
+  margin-left: 4rem; }
+
+.u-font-size-small {
+  font-size: 2rem; }
+
 .u-paragraph-margin {
   margin-left: 15rem;
   margin-right: 15rem; }
 
 .vezi_oferta {
-  margin: 8rem;
+  margin: 6rem;
   height: 3.5rem;
   display: inline-block;
   background-color: #000; }
@@ -283,7 +379,7 @@ a:visited {
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../img/mountain.png);
+  background-image: linear-gradient(to left bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), url(../../img/mountain.png);
   background-size: cover;
   background-position: top;
   background-color: #000;

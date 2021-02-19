@@ -19,45 +19,40 @@
         letter-spacing: .1rem;
         padding-top: 1.5rem;
         animation: moveInRight 1s ease-in;
-        background-image: linear-gradient(to top, $color-white-light, $color-gray-dark);
-        -webkit-background-clip: text;
-        color: transparent;
+        @include gradientTop;  
     }
 
 }
 
 //-------------
-
 .heading_secondary{
     text-transform: uppercase;
     color: $color-white-light;
     line-height: 1.5;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 6rem;
-    background-image: linear-gradient(to bottom right, $color-gray-dark, $color-white-light);
-    -webkit-background-clip: text;
-    color: transparent;
+    @include gradientBott;
 
     span{
         display: block;
     }
+
+    &-offer{
+        text-align: center;
+    }
 }
 
 //------------------
-
 .heading_tertiary{
     color: $color-white-light;
     line-height: 1.2;
     font-weight: 400;
     font-size: 10rem;
     letter-spacing: .3rem;
-    background-image: linear-gradient(to bottom, $color-gray-dark, $color-white-light);
-    -webkit-background-clip: text;
-    color: transparent;
+    @include gradientTop;
 }
 
 //-------------------
-
 .heading_special{
     color: $color-white-light;
     line-height: 1.2;
@@ -65,11 +60,40 @@
     letter-spacing: .3rem;
     margin: 10rem 0;
     font-size: 12rem;
-    background-image: linear-gradient(to bottom, $color-gray-dark, $color-white-light);
-    -webkit-background-clip: text;
-    color: transparent;
-
+    @include gradientTop;
 }
+
+//-------------------
+.heading_offer{
+    &-1{
+        @include gradientBott;
+        font-size: 6rem;
+        font-weight: 300;
+    }
+
+    &-2{
+        @include gradientBott;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+}
+
+//-------------------
+.heading-footer{
+    margin-bottom: 1.5rem;
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: $color-white-light;
+}
+
+
+//-------------------
+.heading-com{
+    font-size: 3.5rem;
+    color: $color-white-dark;
+    @include gradientBott;
+}
+
 
 //paragraph
 .paragraph-small{
@@ -86,14 +110,21 @@
     }
 }
 
+//-------------------
 .paragraph-medium{
     font-size: 2.5rem;
     color: $color-white-light;
 }
 
+//-------------------
 .paragraph-big{
     font-size: 3.5rem;
     color: $color-white-light;
+}
+
+.paragraph-offer{
+    padding-right: 12rem;
+    font-size: 1.8rem;
 }
 
 //lists
@@ -131,8 +162,6 @@
     }
 }
 
-
-
 //------------
 .social_list{
 
@@ -141,7 +170,7 @@
     }
 
     &-img{
-        height: 2.3rem;
+        height: 2.5rem;
         width: 4rem;
         padding-left: .5rem;
         
@@ -156,14 +185,7 @@
     }
 }
 
-//footer
-.heading-footer{
-    margin-bottom: 1.5rem;
-    font-size: 2.6rem;
-    font-weight: 300;
-    color: $color-white-light;
-}
-
+//------------
 .list-footer{
     font-size: 1.8rem;
     font-weight: 200;
@@ -183,4 +205,23 @@
             text-decoration: none;
         }
     }
+}
+
+.list_contact{
+        margin-bottom: 12rem;
+        font-size: 2.5rem;
+
+        li{
+            margin: 1.5rem 0;
+        }
+
+        a,
+        a:active,
+        a:link,
+        a:visited,
+        a:hover{
+            text-decoration: none;
+            color: #000;
+        }
+    
 }
